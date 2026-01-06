@@ -9,9 +9,9 @@ from agents.response import generate_response
 from agents.escalation import decide_action
 
 
-# -----------------------------
+
 # STATE DEFINITION
-# -----------------------------
+
 class TicketState(TypedDict):
     subject: str
     description: str
@@ -25,9 +25,9 @@ class TicketState(TypedDict):
     final_action: str
 
 
-# -----------------------------
+
 # SAFE RESPONSE NODE
-# -----------------------------
+
 def response_node(state: TicketState) -> TicketState:
     return generate_response(state)
 
@@ -35,9 +35,9 @@ def logging_node(state: TicketState) -> TicketState:
     log_ticket(state)
     return state
 
-# -----------------------------
+
 # LANGGRAPH BUILD
-# -----------------------------
+
 builder = StateGraph(TicketState)
 
 builder.add_node("intake", ticket_intake)
@@ -62,9 +62,9 @@ builder.add_edge("escalation", "logging")
 graph_app = builder.compile()
 
 
-# -----------------------------
+
 # GRAPH RUNNER
-# -----------------------------
+
 def run_graph(ticket_data: dict) -> dict:
     initial_state: TicketState = {
         "subject": ticket_data["subject"],
