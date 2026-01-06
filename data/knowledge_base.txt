@@ -1,0 +1,15 @@
+[account]
+How do I reset my password?
+You can reset your password by clicking "Forgot Password" on the login page.
+
+[billing]
+How do I update billing details?
+Go to Account Settings → Billing to update your payment method.
+
+[refund]
+What is the refund policy?
+Refunds are available within 14 days of purchase.
+
+[technical]
+The app is not loading
+Clear your cache, check internet, and try again.
