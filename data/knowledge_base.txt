@@ -1,15 +1,21 @@
-[account]
-How do I reset my password?
-You can reset your password by clicking "Forgot Password" on the login page.
+Billing Issues:
+- Failed payments can occur due to expired cards.
+- Invoices are generated 1st of every month.
+- Refunds take 5–7 business days.
+- Refunds are issued to the original payment method.
 
-[billing]
-How do I update billing details?
-Go to Account Settings → Billing to update your payment method.
+Account Issues:
+- Password reset emails may take a few minutes.
+- Accounts can be locked after multiple failed logins.
+- If a user cannot access their account, they should reset their password.
+- Password reset links expire after 15 minutes. 
 
-[refund]
-What is the refund policy?
-Refunds are available within 14 days of purchase.
+Technical Issues:
+- App crashes can be fixed by restarting the service.
+- Clear browser cache for UI issues.
 
-[technical]
-The app is not loading
-Clear your cache, check internet, and try again.
+General:
+- Support hours are 9 AM – 6 PM IST.
+- Paid users receive priority support.
+
+

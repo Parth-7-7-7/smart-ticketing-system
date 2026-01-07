@@ -8,8 +8,13 @@ llm = ChatOllama(
 )
 
 def generate_response(state: Dict) -> Dict:
+    knowledge = "\n".join(state.get("knowledge", []))
+
     prompt = f"""
 You are a smart SaaS support assistant.
+
+Use the following knowledge base if relevant:
+{knowledge}
 
 Ticket:
 Subject: {state['subject']}
@@ -17,7 +22,10 @@ Description: {state['description']}
 
 Detected Intent: {state.get('intent', 'general')}
 
-Write a clear, professional, and helpful response.
+Rules:
+- If knowledge is relevant, use it
+- If not, respond normally
+- Be clear and professional
 """
 
     response = llm.invoke(prompt)
